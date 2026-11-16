@@ -23,7 +23,6 @@
     "why": "De ce",
     "projects": "Proiecte",
     "principles": "Principii",
-    "partners": "Parteneri",
     "contribute": "Contribuie",
     "github": "GitHub ↗",
     "cta": "Alătură-te",
@@ -100,11 +99,6 @@
         "p": "Teste, integrare continuă, documentație și accesibilitate: fiecare proiect urmează aceleași reguli înainte de a fi publicat."
       }
     ]
-  },
-  "partners": {
-    "title": "Companiile din spatele OpenColibri",
-    "intro": "Companii din ecosistemul Sylius și Symfony susțin organizația și contribuie la proiectele ei.",
-    "join": "Compania ta vrea să se implice? Devino partener."
   },
   "contribute": {
     "title": "Alătură-te OpenColibri",

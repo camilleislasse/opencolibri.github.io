@@ -23,7 +23,6 @@
     "why": "Why",
     "projects": "Projects",
     "principles": "Principles",
-    "partners": "Partners",
     "contribute": "Contribute",
     "github": "GitHub ↗",
     "cta": "Join",
@@ -100,11 +99,6 @@
         "p": "Tests, continuous integration, documentation and accessibility: every project follows the same rules before it is released."
       }
     ]
-  },
-  "partners": {
-    "title": "The companies behind OpenColibri",
-    "intro": "Companies from the Sylius and Symfony ecosystem support the organization and contribute to its projects.",
-    "join": "Does your company want to get involved? Become a partner."
   },
   "contribute": {
     "title": "Join OpenColibri",
