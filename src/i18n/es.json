@@ -1,0 +1,134 @@
+{
+  "locale": {
+    "label": "Español",
+    "hreflang": "es",
+    "match": ["es"]
+  },
+  "meta": {
+    "title": "OpenColibri · E-commerce de código abierto, mantenido entre todos",
+    "description": "OpenColibri acoge plugins y herramientas de e-commerce de código abierto mantenidos por la comunidad y respaldados por socios del ecosistema Sylius y Symfony."
+  },
+  "lang": {
+    "label": "Idioma"
+  },
+  "redirect": {
+    "title": "Redirigiendo…",
+    "manual": "Elige un idioma:"
+  },
+  "announce": {
+    "tag": "Comunidad",
+    "textHtml": "Plugins, herramientas, temas: OpenColibri se construye entre todos. <a href=\"#contribute\">Únete</a>."
+  },
+  "nav": {
+    "why": "Por qué",
+    "projects": "Proyectos",
+    "principles": "Principios",
+    "partners": "Socios",
+    "contribute": "Contribuir",
+    "github": "GitHub ↗",
+    "cta": "Unirse",
+    "menu": "Menú"
+  },
+  "hero": {
+    "title": "E‑commerce de código abierto, mantenido entre todos.",
+    "leadHtml": "OpenColibri acoge plugins y herramientas de e‑commerce mantenidos por la comunidad, en torno a Sylius y Symfony. <strong>Ningún proyecto depende de una sola persona ni de una sola empresa</strong>: puedes construir sobre ellos con confianza.",
+    "cta": "Descubrir los proyectos",
+    "chips": ["Licencia MIT", "Mantenimiento compartido", "Organización neutral"]
+  },
+  "why": {
+    "title": "Por qué mantenerlo entre todos",
+    "intro": "Un plugin de e‑commerce suele depender de una sola persona o de una sola agencia. Cuando pasa a otra cosa, las tiendas que dependen de él se quedan sin actualizaciones.",
+    "aloneTitle": "Un plugin aislado",
+    "aloneItems": [
+      "Mantenido por una sola persona o una sola empresa",
+      "Abandonado cuando su autor cambia de prioridades",
+      "Actualizaciones al ritmo de los proyectos de clientes",
+      "Decisiones técnicas que dependen de un solo actor"
+    ],
+    "sharedTitle": "Un proyecto OpenColibri",
+    "sharedItems": [
+      "Mantenido por varios socios y colaboradores",
+      "Alojado en una organización neutral: sobrevive a la marcha de un mantenedor",
+      "Con licencia libre, que cualquiera puede usar y modificar",
+      "Reglas comunes de calidad, pruebas y documentación"
+    ]
+  },
+  "projects": {
+    "title": "Los proyectos",
+    "intro": "Colibri Starter es el primer proyecto de la organización. Otros plugins y herramientas se sumarán.",
+    "featured": {
+      "tag": "Proyecto principal",
+      "title": "Colibri Starter",
+      "p": "Crea una tienda Sylius completa con un solo comando y luego añade o quita plugins, temas y funcionalidades según tus necesidades. El proyecto sigue siendo estándar: cualquier equipo Symfony puede retomarlo.",
+      "site": "Sitio del proyecto ↗",
+      "docs": "Documentación ↗"
+    },
+    "packagesTitle": "Sus piezas, utilizables por separado",
+    "packages": [
+      { "name": "starter-skeleton", "p": "Inicia un nuevo proyecto Sylius, listo para desarrollar, con un solo comando." },
+      { "name": "starter-core", "p": "El núcleo: servicio Docker de Sylius, instalador y puntos de extensión de los demás paquetes." },
+      { "name": "starter-plugins", "p": "Añade y quita plugins de Sylius, configuración y migraciones incluidas." },
+      { "name": "starter-themes", "p": "21 temas de tienda listos para usar, en claro y en oscuro." },
+      { "name": "starter-import", "p": "Importa el catálogo de una tienda existente, con enriquecimiento por IA opcional." },
+      { "name": "starter-datasets", "p": "Catálogos de demostración listos para importar, imágenes incluidas." },
+      { "name": "starter-menu", "p": "Oculta las entradas del panel de administración que no necesitas." },
+      { "name": "starter-upsun", "p": "Configura, comprueba y despliega una aplicación Sylius en Upsun." }
+    ]
+  },
+  "principles": {
+    "title": "Nuestros principios",
+    "intro": "Cada proyecto alojado por OpenColibri se compromete con las mismas reglas.",
+    "cards": [
+      {
+        "tag": "Abierto",
+        "title": "Licencia libre",
+        "p": "Los proyectos tienen licencia MIT: puedes usarlos, modificarlos y redistribuirlos libremente, también para tus clientes."
+      },
+      {
+        "tag": "Duradero",
+        "title": "Mantenimiento compartido",
+        "p": "Un proyecto tiene varios mantenedores de empresas distintas. Si uno se va, el proyecto sigue adelante."
+      },
+      {
+        "tag": "Neutral",
+        "title": "Una organización común",
+        "p": "Los repositorios pertenecen a OpenColibri, no a una agencia. Las decisiones importantes se toman en conjunto."
+      },
+      {
+        "tag": "Fiable",
+        "title": "Estándares comunes",
+        "p": "Pruebas, integración continua, documentación y accesibilidad: cada proyecto sigue las mismas reglas antes de publicarse."
+      }
+    ]
+  },
+  "partners": {
+    "title": "Las empresas detrás de OpenColibri",
+    "intro": "Empresas del ecosistema Sylius y Symfony apoyan a la organización y contribuyen a sus proyectos.",
+    "join": "¿Tu empresa quiere implicarse? Hazte socio."
+  },
+  "contribute": {
+    "title": "Únete a OpenColibri",
+    "leadHtml": "¿Mantienes un plugin, desarrollas una herramienta o simplemente quieres ayudar? <b>Hay sitio para ti.</b>",
+    "ways": [
+      { "html": "<b>Contribuye</b> a los proyectos existentes: issues, pull requests, documentación, traducciones." },
+      { "html": "<b>Propón un proyecto</b>: confía tu plugin o tu herramienta a la organización para mantenerlo entre varios." },
+      { "html": "<b>Hazte socio</b>: tu empresa se compromete a mantener proyectos junto a los demás socios." }
+    ],
+    "ctaGithub": "OpenColibri en GitHub ↗",
+    "ctaStarter": "Colibri Starter ↗",
+    "termPath": "~/opencolibri",
+    "termLines": [
+      { "type": "cmd", "text": "gh repo fork opencolibri/colibri-starter" },
+      { "type": "ok", "text": "fork creado" },
+      { "type": "cmd", "text": "git switch -c fix/mi-correccion" },
+      { "type": "dim", "text": "programa, prueba, documenta" },
+      { "type": "cmd", "text": "gh pr create" },
+      { "type": "ok", "text": "pull request abierta" },
+      { "type": "dim", "text": "revisada por los mantenedores" }
+    ]
+  },
+  "footer": {
+    "org": "OpenColibri",
+    "resources": "Recursos"
+  }
+}

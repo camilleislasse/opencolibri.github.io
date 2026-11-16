@@ -1,0 +1,134 @@
+{
+  "locale": {
+    "label": "Română",
+    "hreflang": "ro",
+    "match": ["ro"]
+  },
+  "meta": {
+    "title": "OpenColibri · E-commerce open source, întreținut împreună",
+    "description": "OpenColibri găzduiește pluginuri și instrumente e-commerce open source, întreținute de comunitate și susținute de parteneri din ecosistemul Sylius și Symfony."
+  },
+  "lang": {
+    "label": "Limba"
+  },
+  "redirect": {
+    "title": "Redirecționare…",
+    "manual": "Alege o limbă:"
+  },
+  "announce": {
+    "tag": "Comunitate",
+    "textHtml": "Pluginuri, instrumente, teme: OpenColibri se construiește împreună. <a href=\"#contribute\">Alătură-te</a>."
+  },
+  "nav": {
+    "why": "De ce",
+    "projects": "Proiecte",
+    "principles": "Principii",
+    "partners": "Parteneri",
+    "contribute": "Contribuie",
+    "github": "GitHub ↗",
+    "cta": "Alătură-te",
+    "menu": "Meniu"
+  },
+  "hero": {
+    "title": "E‑commerce open source, întreținut împreună.",
+    "leadHtml": "OpenColibri găzduiește pluginuri și instrumente e‑commerce întreținute de comunitate, în jurul Sylius și Symfony. <strong>Niciun proiect nu depinde de o singură persoană sau de o singură companie</strong>, așa că poți construi pe ele cu încredere.",
+    "cta": "Descoperă proiectele",
+    "chips": ["Licență MIT", "Întreținere comună", "Organizație neutră"]
+  },
+  "why": {
+    "title": "De ce să întreținem împreună",
+    "intro": "Un plugin e‑commerce depinde adesea de o singură persoană sau de o singură agenție. Când aceasta trece la altceva, magazinele care depind de el rămân fără actualizări.",
+    "aloneTitle": "Un plugin izolat",
+    "aloneItems": [
+      "Întreținut de o singură persoană sau o singură companie",
+      "Abandonat când autorul își schimbă prioritățile",
+      "Actualizări în ritmul proiectelor pentru clienți",
+      "Decizii tehnice care depind de un singur actor"
+    ],
+    "sharedTitle": "Un proiect OpenColibri",
+    "sharedItems": [
+      "Întreținut de mai mulți parteneri și contribuitori",
+      "Găzduit de o organizație neutră: supraviețuiește plecării unui maintainer",
+      "Sub licență liberă, pe care oricine o poate folosi și modifica",
+      "Reguli comune de calitate, teste și documentație"
+    ]
+  },
+  "projects": {
+    "title": "Proiectele",
+    "intro": "Colibri Starter este primul proiect al organizației. Alte pluginuri și instrumente i se vor alătura.",
+    "featured": {
+      "tag": "Proiect principal",
+      "title": "Colibri Starter",
+      "p": "Creează un magazin Sylius complet cu o singură comandă, apoi adaugă sau elimină pluginuri, teme și funcționalități după nevoi. Proiectul rămâne standard: orice echipă Symfony îl poate prelua.",
+      "site": "Site-ul proiectului ↗",
+      "docs": "Documentație ↗"
+    },
+    "packagesTitle": "Componentele sale, utilizabile separat",
+    "packages": [
+      { "name": "starter-skeleton", "p": "Pornește un nou proiect Sylius, gata de dezvoltare, cu o singură comandă." },
+      { "name": "starter-core", "p": "Nucleul: serviciul Docker Sylius, instalatorul și punctele de extensie ale celorlalte pachete." },
+      { "name": "starter-plugins", "p": "Adaugă și elimină pluginuri Sylius, inclusiv configurația și migrările." },
+      { "name": "starter-themes", "p": "21 de teme de magazin gata de folosit, în mod luminos și întunecat." },
+      { "name": "starter-import", "p": "Importă catalogul unui magazin existent, cu îmbogățire opțională prin AI." },
+      { "name": "starter-datasets", "p": "Cataloage demo gata de importat, inclusiv imaginile." },
+      { "name": "starter-menu", "p": "Ascunde elementele din meniul de administrare de care nu ai nevoie." },
+      { "name": "starter-upsun", "p": "Configurează, verifică și publică o aplicație Sylius pe Upsun." }
+    ]
+  },
+  "principles": {
+    "title": "Principiile noastre",
+    "intro": "Fiecare proiect găzduit de OpenColibri se angajează să respecte aceleași reguli.",
+    "cards": [
+      {
+        "tag": "Deschis",
+        "title": "Licență liberă",
+        "p": "Proiectele sunt sub licență MIT: le poți folosi, modifica și redistribui liber, inclusiv pentru clienții tăi."
+      },
+      {
+        "tag": "Durabil",
+        "title": "Întreținere comună",
+        "p": "Un proiect are mai mulți maintaineri din companii diferite. Plecarea unuia nu oprește proiectul."
+      },
+      {
+        "tag": "Neutru",
+        "title": "O organizație comună",
+        "p": "Depozitele aparțin OpenColibri, nu unei agenții. Deciziile importante se iau împreună."
+      },
+      {
+        "tag": "De încredere",
+        "title": "Standarde comune",
+        "p": "Teste, integrare continuă, documentație și accesibilitate: fiecare proiect urmează aceleași reguli înainte de a fi publicat."
+      }
+    ]
+  },
+  "partners": {
+    "title": "Companiile din spatele OpenColibri",
+    "intro": "Companii din ecosistemul Sylius și Symfony susțin organizația și contribuie la proiectele ei.",
+    "join": "Compania ta vrea să se implice? Devino partener."
+  },
+  "contribute": {
+    "title": "Alătură-te OpenColibri",
+    "leadHtml": "Întreții un plugin, dezvolți un instrument sau vrei pur și simplu să ajuți? <b>Este loc și pentru tine.</b>",
+    "ways": [
+      { "html": "<b>Contribuie</b> la proiectele existente: issues, pull requests, documentație, traduceri." },
+      { "html": "<b>Propune un proiect</b>: încredințează pluginul sau instrumentul tău organizației, ca să fie întreținut împreună." },
+      { "html": "<b>Devino partener</b>: compania ta se angajează să întrețină proiecte alături de ceilalți parteneri." }
+    ],
+    "ctaGithub": "OpenColibri pe GitHub ↗",
+    "ctaStarter": "Colibri Starter ↗",
+    "termPath": "~/opencolibri",
+    "termLines": [
+      { "type": "cmd", "text": "gh repo fork opencolibri/colibri-starter" },
+      { "type": "ok", "text": "fork creat" },
+      { "type": "cmd", "text": "git switch -c fix/corectura-mea" },
+      { "type": "dim", "text": "scrie cod, testează, documentează" },
+      { "type": "cmd", "text": "gh pr create" },
+      { "type": "ok", "text": "pull request deschis" },
+      { "type": "dim", "text": "revizuit de maintaineri" }
+    ]
+  },
+  "footer": {
+    "org": "OpenColibri",
+    "resources": "Resurse"
+  }
+}

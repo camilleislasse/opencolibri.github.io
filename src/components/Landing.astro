@@ -1,0 +1,266 @@
+---
+import LangSwitcher from './LangSwitcher.astro';
+import type { Locale, Translations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  t: Translations;
+}
+
+const { locale, t } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const asset = (path: string) => `${base}/${path.replace(/^\//, '')}`;
+const org = 'https://github.com/opencolibri';
+const starterSite = 'https://starter.opencolibri.org/';
+const starterDocs = 'https://starter.opencolibri.org/docs/';
+const starterRepo = `${org}/colibri-starter`;
+const partners = [
+  { name: 'JoliCode', src: 'images/logo/jolicode.svg', url: 'https://jolicode.com' },
+  { name: 'Monsieur Biz', src: 'images/logo/monsieurbiz.svg', url: 'https://monsieurbiz.com' },
+  { name: 'redirection.io', src: 'images/logo/redirectionio.svg', url: 'https://redirection.io' },
+];
+const sections = [
+  { id: 'why', label: t.nav.why },
+  { id: 'projects', label: t.nav.projects },
+  { id: 'principles', label: t.nav.principles },
+  { id: 'partners', label: t.nav.partners },
+  { id: 'contribute', label: t.nav.contribute },
+];
+---
+
+<div class="announce" role="note">
+  <div class="wrap announce-in">
+    <span class="announce-tag">{t.announce.tag}</span>
+    <p set:html={t.announce.textHtml} />
+  </div>
+</div>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><img src={asset('images/logo.png')} alt="" width="38" height="32" class="brand-logo" />OpenColibri<span class="dot"></span></a>
+    <div class="nav-links">
+      {sections.map((s) => <a href={`#${s.id}`}>{s.label}</a>)}
+      <a href={org} target="_blank" rel="noopener" class="btn btn-ghost nav-github">{t.nav.github}</a>
+      <a href="#contribute" class="btn btn-primary nav-cta">{t.nav.cta}</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label={t.nav.menu}>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-panel" id="nav-panel" hidden>
+    <div class="wrap">
+      {sections.map((s) => <a href={`#${s.id}`}>{s.label}</a>)}
+      <a href={org} target="_blank" rel="noopener">{t.nav.github}</a>
+      <a href="#contribute" class="btn btn-primary">{t.nav.cta}</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+  const panel = document.getElementById('nav-panel');
+  if (toggle && panel) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      panel.hidden = !open;
+    };
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    panel.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    });
+  }
+</script>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>{t.hero.title}</h1>
+      <p class="lead" set:html={t.hero.leadHtml} />
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">{t.hero.cta}</a>
+        <a href={org} target="_blank" rel="noopener" class="btn btn-ghost">{t.nav.github}</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hv-stage">
+        <img class="hv-bird" src={asset('images/logo-full.png')} alt="" width="405" height="340" loading="eager" />
+        <ul class="hv-chips">
+          {t.hero.chips.map((chip) => (
+            <li><span class="mark" aria-hidden="true">✓</span>{chip}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="own-sec sec-muted" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{t.why.title}</h2>
+      <p class="intro">{t.why.intro}</p>
+    </div>
+
+    <div class="split">
+      <div class="side own">
+        <h3>{t.why.sharedTitle}</h3>
+        <ul class="plist">
+          {t.why.sharedItems.map((item) => (
+            <li><span class="mark">✓</span><span class="t">{item}</span></li>
+          ))}
+        </ul>
+      </div>
+      <div class="side sub">
+        <h3>{t.why.aloneTitle}</h3>
+        <ul class="plist">
+          {t.why.aloneItems.map((item) => (
+            <li><span class="mark">✕</span><span class="t">{item}</span></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proj-sec" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{t.projects.title}</h2>
+      <p class="intro">{t.projects.intro}</p>
+    </div>
+
+    <article class="proj-feature">
+      <div>
+        <span class="tag">{t.projects.featured.tag}</span>
+        <h3>{t.projects.featured.title}</h3>
+        <p>{t.projects.featured.p}</p>
+      </div>
+      <div class="proj-links">
+        <a href={starterSite} target="_blank" rel="noopener" class="btn btn-em">{t.projects.featured.site}</a>
+        <a href={starterDocs} target="_blank" rel="noopener" class="btn btn-light">{t.projects.featured.docs}</a>
+        <a href={starterRepo} target="_blank" rel="noopener" class="btn btn-on-dark">GitHub ↗</a>
+      </div>
+    </article>
+
+    <h3 class="pkg-title">{t.projects.packagesTitle}</h3>
+    <ul class="pkg-grid">
+      {t.projects.packages.map((pkg) => (
+        <li>
+          <a href={`${org}/${pkg.name}`} target="_blank" rel="noopener" class="pkg">
+            <span class="pkg-name">{pkg.name}</span>
+            <span class="pkg-desc">{pkg.p}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<section class="sov-sec sec-muted" id="principles">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{t.principles.title}</h2>
+      <p class="intro">{t.principles.intro}</p>
+    </div>
+
+    <div class="sov-grid">
+      {t.principles.cards.map((card) => (
+        <div class="sov-card">
+          <span class="tag">{card.tag}</span>
+          <h3>{card.title}</h3>
+          <p>{card.p}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="partners-sec" id="partners">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{t.partners.title}</h2>
+      <p class="intro">{t.partners.intro}</p>
+    </div>
+
+    <ul class="partner-grid">
+      {partners.map((p) => (
+        <li>
+          <a href={p.url} target="_blank" rel="noopener" class="partner">
+            <img src={asset(p.src)} alt={p.name} loading="lazy" />
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <p class="partners-join"><a href="#contribute">{t.partners.join}</a></p>
+  </div>
+</section>
+
+<section class="found sec-dark" id="contribute">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{t.contribute.title}</h2>
+    </div>
+
+    <div class="grid">
+      <div>
+        <p class="lead" set:html={t.contribute.leadHtml} />
+        <ul class="feats">
+          {t.contribute.ways.map((way) => (
+            <li>
+              <span class="k">-</span>
+              <span class="ft" set:html={way.html} />
+            </li>
+          ))}
+        </ul>
+        <div class="found-cta">
+          <a href={org} target="_blank" rel="noopener" class="btn btn-em">{t.contribute.ctaGithub}</a>
+          <a href={starterSite} target="_blank" rel="noopener" class="btn btn-light">{t.contribute.ctaStarter}</a>
+        </div>
+      </div>
+
+      <div class="term" aria-hidden="true">
+        <div class="bar">
+          <i style="background:#1dcada"></i><i style="background:#1dcada"></i><i style="background:#1b3d42"></i>
+          <span class="p">{t.contribute.termPath}</span>
+        </div>
+        <div class="body">
+          {t.contribute.termLines.map((line, i) => (
+            <>
+              {i > 0 && line.type === 'cmd' && <br />}
+              <div class={line.type}>{line.text}</div>
+            </>
+          ))}
+          <br />
+          <div class="cmd"><span class="cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="brand"><img src={asset('images/logo.png')} alt="" width="38" height="32" class="brand-logo" />OpenColibri<span class="dot"></span></a>
+        <LangSwitcher locale={locale} label={t.lang.label} />
+      </div>
+      <div class="cols">
+        <div class="col">
+          <h4>{t.footer.org}</h4>
+          {sections.map((s) => <a href={`#${s.id}`}>{s.label}</a>)}
+        </div>
+        <div class="col">
+          <h4>{t.footer.resources}</h4>
+          <a href={org} target="_blank" rel="noopener">GitHub ↗</a>
+          <a href={starterSite} target="_blank" rel="noopener" class="hl">Colibri Starter ↗</a>
+          <a href={starterDocs} target="_blank" rel="noopener">{t.projects.featured.docs}</a>
+          <a href="https://sylius.com" target="_blank" rel="noopener">Sylius.com ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
