@@ -14,16 +14,10 @@ const org = 'https://github.com/opencolibri';
 const starterSite = 'https://starter.opencolibri.org/';
 const starterDocs = 'https://starter.opencolibri.org/docs/';
 const starterRepo = `${org}/colibri-starter`;
-const partners = [
-  { name: 'JoliCode', src: 'images/logo/jolicode.svg', url: 'https://jolicode.com' },
-  { name: 'Monsieur Biz', src: 'images/logo/monsieurbiz.svg', url: 'https://monsieurbiz.com' },
-  { name: 'redirection.io', src: 'images/logo/redirectionio.svg', url: 'https://redirection.io' },
-];
 const sections = [
   { id: 'why', label: t.nav.why },
   { id: 'projects', label: t.nav.projects },
   { id: 'principles', label: t.nav.principles },
-  { id: 'partners', label: t.nav.partners },
   { id: 'contribute', label: t.nav.contribute },
 ];
 ---
@@ -174,27 +168,6 @@ const sections = [
         </div>
       ))}
     </div>
-  </div>
-</section>
-
-<section class="partners-sec" id="partners">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>{t.partners.title}</h2>
-      <p class="intro">{t.partners.intro}</p>
-    </div>
-
-    <ul class="partner-grid">
-      {partners.map((p) => (
-        <li>
-          <a href={p.url} target="_blank" rel="noopener" class="partner">
-            <img src={asset(p.src)} alt={p.name} loading="lazy" />
-          </a>
-        </li>
-      ))}
-    </ul>
-
-    <p class="partners-join"><a href="#contribute">{t.partners.join}</a></p>
   </div>
 </section>
 

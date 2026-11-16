@@ -343,14 +343,6 @@ footer { background: var(--paper); border-top: 1px solid var(--line); padding-bl
 .pkg-desc { color: var(--ink-soft); font-size: .93rem; line-height: 1.5; }
 
 /* ---- Partners ---- */
-.partners-sec .section-head { margin-bottom: clamp(2rem, 4vw, 2.8rem); }
-.partner-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1rem; }
-.partner { display: flex; align-items: center; justify-content: center; height: 120px; padding: 1.5rem;
-    border: 1px solid var(--line); border-radius: 16px; background: var(--white); transition: border-color .2s, transform .35s var(--ease); }
-.partner:hover { border-color: var(--teal); transform: translateY(-2px); }
-.partner img { max-height: 40px; max-width: 100%; width: auto; object-fit: contain; }
-.partners-join { margin: 1.8rem 0 0; font-size: .96rem; }
-.partners-join a { color: var(--teal); font-weight: 600; text-underline-offset: 3px; }
 
 /* Keep anchored sections clear of the sticky nav */
 section[id] { scroll-margin-top: 66px; }
