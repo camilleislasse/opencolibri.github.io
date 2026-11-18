@@ -31,7 +31,7 @@ const sections = [
 
 <nav>
   <div class="wrap nav-in">
-    <a href="#top" class="brand"><img src={asset('images/logo.png')} alt="" width="38" height="32" class="brand-logo" />OpenColibri<span class="dot"></span></a>
+    <a href="#top" class="brand"><img src={asset('images/logo.svg')} alt="" width="36" height="32" class="brand-logo" />OpenColibri<span class="dot"></span></a>
     <div class="nav-links">
       {sections.map((s) => <a href={`#${s.id}`}>{s.label}</a>)}
       <a href={org} target="_blank" rel="noopener" class="btn btn-ghost nav-github">{t.nav.github}</a>
@@ -79,7 +79,7 @@ const sections = [
 
     <div class="hero-visual">
       <div class="hv-stage">
-        <img class="hv-bird" src={asset('images/logo-full.png')} alt="" width="405" height="340" loading="eager" />
+        <img class="hv-bird" src={asset('images/logo.svg')} alt="" width="405" height="362" loading="eager" />
         <ul class="hv-chips">
           {t.hero.chips.map((chip) => (
             <li><span class="mark" aria-hidden="true">✓</span>{chip}</li>
@@ -218,7 +218,7 @@ const sections = [
   <div class="wrap">
     <div class="foot">
       <div>
-        <a href="#top" class="brand"><img src={asset('images/logo.png')} alt="" width="38" height="32" class="brand-logo" />OpenColibri<span class="dot"></span></a>
+        <a href="#top" class="brand"><img src={asset('images/logo.svg')} alt="" width="36" height="32" class="brand-logo" />OpenColibri<span class="dot"></span></a>
         <LangSwitcher locale={locale} label={t.lang.label} />
       </div>
       <div class="cols">
